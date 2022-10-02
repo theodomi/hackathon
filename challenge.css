@@ -4,22 +4,23 @@
     box-sizing: border-box;
 }
 
-ul{ 
+ul {
     list-style: none;
 }
 
-body{
+body {
     background-image: url(bg.png);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: repeat;
 }
 
-body *{
+body * {
     font-family: 'Poppins', sans-serif;
 }
 
-main, header {
+main,
+header {
     max-width: 580px;
     width: 90%;
     margin: 32px auto;
@@ -35,24 +36,108 @@ main, header {
     font-weight: 300;
 }
 
+.category-title,
+.subcategory {
+    color: white;
+    text-align: left;
+}
+
+.category-title {
+    margin-top: 20px;
+}
+
+.subcategory {
+    font-weight: 500;
+}
+
 p {
     color: white;
     font-weight: 500;
+}
+
+a:link,
+a:visited {
+    color: white;
 }
 
 .sections {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 24px;
     justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .item-list a {
     color: white;
     font-style: italic;
 }
+
+/* photos & infos */
+.photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.photo {
+    position: relative;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.desc {
+    color: white;
+    font-size: 15px;
+    padding: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+}
+
+.info {
+    font-weight: 300;
+}
+
 /* animation */
 
 header {
@@ -64,12 +149,12 @@ main {
 }
 
 @keyframes fromTop {
-    from { 
+    from {
         opacity: 0;
         transform: translateY(-30px)
     }
 
-    to { 
+    to {
         opacity: 1;
         transform: translateY(0);
     }
