@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{ 
+    list-style: none;
+}
+
+body{
+    background-image: url(bg.png);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: repeat;
+}
+
+body *{
+    font-family: 'Poppins', sans-serif;
+}
+
+main, header {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    gap: 24px;
+}
+
+.text {
+    text-align: center;
+    color: white;
+}
+
+#subtitle {
+    font-weight: 300;
+}
+
+p {
+    color: white;
+    font-weight: 500;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+.item-list a {
+    color: white;
+    font-style: italic;
+}
+/* animation */
+
+header {
+    animation: fromTop 2s backwards;
+}
+
+main {
+    animation: fromTop 4s 1s backwards;
+}
+
+@keyframes fromTop {
+    from { 
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
